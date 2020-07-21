@@ -43,7 +43,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   width: 1200px;
-  outline: 2px solid blueviolet;
+  /* outline: 2px solid blueviolet; */
 }
 
 .list {
@@ -125,6 +125,21 @@ address {
   letter-spacing: 0.02em;
 }
 
+/* .navigation-list-link:hover::after {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 4px;
+
+  background: var(--accent);
+  border-radius: 2px;
+} */
+/* width: 77px;
+height: 4px;
+
+background: #2196F3;
+border-radius: 2px; */
+
 .navigation-list-link.studio {
   color: var(--accent);
 }
@@ -165,16 +180,35 @@ address {
 /* ЗАГОЛОВОК */
 
 .main {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/background_header/Header.jpg);
+
   text-align: center;
 }
+
+/* max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8),rgba(47, 48, 58, 0.8)), url(../images/background_header/Header.jpg);
+   */
 
 .main-heading {
   margin-top: 0;
   margin-bottom: 30px;
   /* Временно для просмотра */
-  color: #731482;
+  color: var(--text-dark-theme-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -184,6 +218,13 @@ address {
 }
 
 .main-heading-order-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+
   background-color: var(--accent);
   color: var(--text-dark-theme-color);
 
@@ -191,6 +232,7 @@ address {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* О НАС */
@@ -266,6 +308,10 @@ address {
 
 .team-list-item {
   width: calc((100% - 90px) / 4);
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item:not(:last-child) {
