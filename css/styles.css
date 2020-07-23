@@ -27,6 +27,7 @@ html {
   --accent: #2196f3;
   --text-dark-theme-color: #fff;
   --secondary-background-color: #f5f4fa;
+  --social-link-color: #afb1b8;
 }
 
 body {
@@ -387,7 +388,11 @@ address {
 
 .team-img {
   display: block;
-  margin-bottom: 30px;
+}
+
+.team-name-block {
+  padding: 30px 32px 24px 32px;
+  background-color: var(--text-dark-theme-color);
 }
 
 .team-name {
@@ -412,6 +417,37 @@ address {
 
 .team-social-list {
   display: flex;
+  justify-content: space-around;
+}
+
+.team-social-icons {
+  width: 20px;
+  height: 20px;
+}
+
+.team-social-list-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-list-item a {
+  fill: var(--social-link-color);
+}
+
+.team-social-list-item:hover {
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.team-social-list-item:hover a {
+  fill: var(--text-dark-theme-color);
 }
 
 /* ПОСТОЯННЫЕ КЛИЕНТЫ */
