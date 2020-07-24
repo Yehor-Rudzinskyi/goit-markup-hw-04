@@ -82,6 +82,11 @@ address {
   font-style: normal;
 }
 
+.social-icons {
+  width: 20px;
+  height: 20px;
+}
+
 /* НАВИГАЦИЯ */
 
 .navigation {
@@ -418,11 +423,6 @@ address {
 .team-social-list {
   display: flex;
   justify-content: space-around;
-}
-
-.team-social-icons {
-  width: 20px;
-  height: 20px;
 }
 
 .team-social-list-item {
