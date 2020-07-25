@@ -44,7 +44,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   width: 1200px;
-  outline: 2px solid blueviolet;
+  /* outline: 2px solid blueviolet; */
 }
 
 .list {
@@ -85,6 +85,7 @@ address {
 .social-icons {
   width: 20px;
   height: 20px;
+  /* продумать наследование цвета */
 }
 
 /* НАВИГАЦИЯ */
@@ -120,7 +121,8 @@ address {
 
 .navigation-list-link {
   display: block;
-  padding-top: 32px;
+  /* временно | для няшного отображения афтер */
+  padding-top: 34px;
   padding-bottom: 32px;
 
   color: var(--primary-text-color);
@@ -137,6 +139,7 @@ address {
   color: var(--accent);
 }
 
+/* временно | псевдо-тренька */
 .navigation-list-link.studio::after {
   content: '';
   display: block;
@@ -225,14 +228,6 @@ address {
   text-align: center;
 }
 
-/* max-width: 1600px;
-  height: 600px;
-  margin-right: auto;
-  margin-left: auto;
-  
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8),rgba(47, 48, 58, 0.8)), url(../images/background_header/Header.jpg);
-   */
-
 .main-heading {
   margin-top: 0;
   margin-bottom: 30px;
@@ -262,6 +257,7 @@ address {
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 /* О НАС */
@@ -422,7 +418,6 @@ address {
 
 .team-social-list {
   display: flex;
-  justify-content: space-around;
 }
 
 .team-social-list-item {
@@ -444,6 +439,7 @@ address {
 .team-social-list-item:hover {
   background-color: var(--accent);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .team-social-list-item:hover a {
@@ -527,8 +523,36 @@ address {
   line-height: 1.71;
 }
 
+.footer-social-list {
+  display: flex;
+}
+
 .footer-address-list-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-social-list-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-list-item:hover {
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+.footer-social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-icons {
+  fill: var(--text-dark-theme-color);
 }
 
 .street {
@@ -536,7 +560,33 @@ address {
 }
 
 .footer-subtitle {
+  display: block;
+  margin-bottom: 20px;
   color: var(--text-dark-theme-color);
+}
+
+.footer-btn {
+  display: flex;
+  padding: 10px 28px;
+  align-items: center;
+
+  color: var(--text-dark-theme-color);
+  background-color: var(--accent);
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-icon-plane {
+  margin-left: 10px;
 }
 
 /* СТРАНИЦА ПОРТФОЛИО */
@@ -558,7 +608,9 @@ address {
 
 .portfolio-btn {
   padding: 6px 22px;
+
   background: #f5f4fa;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -576,7 +628,7 @@ address {
   outline: none;
 }
 
-/* карточки */
+/* карточки портфолио */
 .portfolio-cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -587,8 +639,12 @@ address {
   margin-right: 30px;
   margin-bottom: 30px;
 
-  /* width: 370px;
-  margin-bottom: 30px; */
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-cards-list-item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-cards-list-item:nth-child(3n) {
