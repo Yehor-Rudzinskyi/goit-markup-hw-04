@@ -38,6 +38,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -90,6 +96,10 @@ address {
 
 /* НАВИГАЦИЯ */
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -121,8 +131,8 @@ address {
 
 .navigation-list-link {
   display: block;
-  /* временно | для няшного отображения афтер */
-  padding-top: 34px;
+  position: relative;
+  padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--primary-text-color);
@@ -134,8 +144,6 @@ address {
 }
 
 .navigation-list-link.studio {
-  padding-bottom: 0px;
-
   color: var(--accent);
 }
 
@@ -143,11 +151,12 @@ address {
 .navigation-list-link.studio::after {
   content: '';
   display: block;
-  margin-top: 28px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 4px;
 
-  background-color: currentColor;
+  background-color: var(--accent);
   border-radius: 2px;
 }
 
@@ -191,6 +200,7 @@ address {
 .header-icons {
   fill: var(--secomdary-text-color);
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .address-header-link:hover,
