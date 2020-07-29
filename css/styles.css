@@ -175,6 +175,8 @@ address {
 }
 
 .address-header-link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -200,7 +202,7 @@ address {
 .header-icons {
   fill: var(--secomdary-text-color);
   margin-right: 10px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .address-header-link:hover,
@@ -430,26 +432,23 @@ address {
   display: flex;
 }
 
-.team-social-list-item {
+.team-social-list-item a {
   display: flex;
   width: 44px;
   height: 44px;
   justify-content: center;
   align-items: center;
+
+  fill: var(--social-link-color);
 }
 
 .team-social-list-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.team-social-list-item a {
-  fill: var(--social-link-color);
-}
-
 .team-social-list-item:hover {
   background-color: var(--accent);
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .team-social-list-item:hover a {
@@ -542,19 +541,20 @@ address {
 }
 
 .footer-social-list-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-list-item a {
   display: flex;
   width: 44px;
   height: 44px;
   justify-content: center;
   align-items: center;
-
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
 }
 
 .footer-social-list-item:hover {
   background-color: var(--accent);
-  cursor: pointer;
 }
 
 .footer-social-list-item:not(:last-child) {
